@@ -1,0 +1,17 @@
+<!-- app/views/products/index.html.erb -->
+<div class="max-w-4xl mx-auto mt-8">
+  <h1 class="text-2xl font-bold mb-4">All Products</h1>
+  <div class="grid grid-cols-1 gap-4">
+    <% @products.each do |product| %>
+      <div class="p-4 bg-white rounded shadow space-y-2">
+        <p><strong>Type:</strong> <%= product.type %></p>
+        <p><strong>Name:</strong> <%= product.name %></p>
+        <p><strong>Price:</strong> $<%= product.price %></p>
+        <p><strong>Description:</strong> <%= truncate(product.description, length: 80) %></p>
+        <%= link_to "Show", product_path(product), class: "text-blue-500 hover:underline" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

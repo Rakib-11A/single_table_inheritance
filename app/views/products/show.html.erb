@@ -1,0 +1,13 @@
+<!-- app/views/products/show.html.erb -->
+
+  <div class="max-w-xl mx-auto mt-8 p-6 bg-white rounded shadow">
+    <h1 class="text-xl font-bold mb-4">Product Details</h1>
+    <p><strong>Type:</strong> <%= @product.type %></p>
+    <p><strong>Name:</strong> <%= @product.name %></p>
+    <p><strong>Description:</strong> <%= @product.description %></p>
+    <p><strong>Price:</strong> $<%= @product.price %></p>
+    <%= link_to "Back", products_path, class: " bg-red-500 rounded-lg p-2 mt-2 text-blue-700 text-center hover:underline" %>
+  </div>
+
+
+
